@@ -11,20 +11,13 @@ namespace ACMEPAY.BE.Repositories
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
-        public IBaseRepository<AuditLog> AuditLogs { get; private set; }
-
-        public IBaseRepository<FinancialClaim> FinancialClaims { get; private set; }
 
         public IBaseRepository<Payment> Payments { get; private set; }
 
-        public IBaseRepository<Order> Orders { get; private set; }
 
         public UnitOfWork (ApplicationDbContext context )
         { 
             _context = context;
-            AuditLogs =new BaseRepository<AuditLog>(_context);
-            FinancialClaims = new BaseRepository<FinancialClaim>(_context);
-            Orders = new BaseRepository<Order>(_context);
             Payments = new BaseRepository<Payment>(_context);
 
         }

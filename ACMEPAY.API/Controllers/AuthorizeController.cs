@@ -37,7 +37,7 @@ namespace ACMEPAY.API.Controllers
             try
             {
                 var _paymentDb = _authorizeRepository.Payments.GetByID(Id);
-                _paymentDb.OrderId = int.Parse(OrderRefrence);
+                //_paymentDb.OrderId = int.Parse(OrderRefrence);
                 _authorizeRepository.Payments.Update(_paymentDb);
                 _authorizeRepository.Complete();
                 //return Ok();
@@ -56,7 +56,7 @@ namespace ACMEPAY.API.Controllers
             try
             {
                 var _paymentDb = _authorizeRepository.Payments.GetByID(Id);
-                _paymentDb.OrderId = int.Parse(OrderRefrence);
+                //_paymentDb.OrderId = int.Parse(OrderRefrence);
                 _authorizeRepository.Payments.Update(_paymentDb);
                 _authorizeRepository.Complete();
                 //return Ok();

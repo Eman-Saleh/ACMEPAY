@@ -9,10 +9,8 @@ namespace ACMEPAY.DB.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        IBaseRepository<AuditLog> AuditLogs { get; }
-        IBaseRepository<FinancialClaim> FinancialClaims { get; }
         IBaseRepository<Payment> Payments { get; }
-        IBaseRepository<Order> Orders { get; }
+     
 
         int Complete();
     }

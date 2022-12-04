@@ -5,11 +5,6 @@ namespace ACMEPAY.DB.Models
 {
     public partial class Payment
     {
-        public Payment()
-        {
-            Orders = new HashSet<Order>();
-        }
-
         public int Id { get; set; }
         public decimal? Amount { get; set; }
         public string? Currency { get; set; }
@@ -18,7 +13,6 @@ namespace ACMEPAY.DB.Models
         public string? ExpirationMonth { get; set; }
         public string? ExpirationYear { get; set; }
         public string? Cvv { get; set; }
-
-        public virtual ICollection<Order> Orders { get; set; }
+        public string? OrderReference { get; set; }
     }
 }
