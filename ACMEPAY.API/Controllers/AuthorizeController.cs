@@ -38,8 +38,8 @@ namespace ACMEPAY.API.Controllers
             {
                 var _paymentDb = _authorizeRepository.Payments.GetByID(Id);
                 //_paymentDb.OrderId = int.Parse(OrderRefrence);
-                _authorizeRepository.Payments.Update(_paymentDb);
-                _authorizeRepository.Complete();
+                //_authorizeRepository.Payments.Update(_paymentDb);
+                //_authorizeRepository.Complete();
                 //return Ok();
                 return Content("{ \"Id\":" + Id + ", \"Status\":Voided }", "application/json");
 
@@ -57,8 +57,8 @@ namespace ACMEPAY.API.Controllers
             {
                 var _paymentDb = _authorizeRepository.Payments.GetByID(Id);
                 //_paymentDb.OrderId = int.Parse(OrderRefrence);
-                _authorizeRepository.Payments.Update(_paymentDb);
-                _authorizeRepository.Complete();
+                //_authorizeRepository.Payments.Update(_paymentDb);
+                //_authorizeRepository.Complete();
                 //return Ok();
                 return Content("{ \"Id\":" + Id + ", \"Status\":Captured }", "application/json");
 
